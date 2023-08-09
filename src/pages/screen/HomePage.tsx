@@ -13,7 +13,7 @@ const HomePage = () => {
     const { article }:any = useTanCategory(userID)
     useAuthor(userID)
 
-    console.log( useAuthor(userID));
+    // console.log( useAuthor(userID));
 
     return (
         <div>

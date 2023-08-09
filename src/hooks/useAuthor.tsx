@@ -26,6 +26,7 @@ export const useTanAuthor = () => {
         queryFn: viewAuthor,
         refetchInterval: 1000,
     })
+    console.log(authors)
     return { authors, error, isLoading }
 }
 
@@ -35,6 +36,7 @@ export const useTanAuthorOne = (id: string) => {
         queryFn: () => getOneAuthor(id),
         refetchInterval: 1000,
     })
+
     return { author, error, isLoading }
 }
 
@@ -62,14 +64,14 @@ export const useTanArticle = async (id: string) => {
     return { article, isLoading }
 }
 
-export const useTanCategory = async(userID:string)=>{
-    const {data, isLoading} = useQuery({
-        queryKey: ["CategoryArts", { id: userID }],
+export const useTanCategory = async(userID: string)=>{
+    const {data :article, isLoading} = useQuery({
+        queryKey: ["CategoryArts"],
         queryFn: ()=>CategoryArticle(userID),
         refetchInterval: 1000
     })
-    console.log(data)
+    
 
-    return {data, isLoading,}
+    return {article, isLoading,}
 }
 

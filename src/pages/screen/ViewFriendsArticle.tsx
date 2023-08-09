@@ -9,6 +9,8 @@ import img from "../../assets/bukky.jpg"
 
 const ViewFriendsArticle = () => {
     const userID = useSelector((state: any) => state.appUser)
+    const article = useTanCategory(userID)
+    console.log(article)
 
    
 

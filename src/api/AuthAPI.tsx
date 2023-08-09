@@ -30,6 +30,7 @@ export const signinAuthor = async (data: any) => {
 export const getOneAuthor = async (userID: string) => {
     try {
         return await axios.get(`${url}/${userID}/get-one-author`).then((res: any) => {
+            console.log(res.data.data)
             return res.data.data
         })
     } catch (error) {

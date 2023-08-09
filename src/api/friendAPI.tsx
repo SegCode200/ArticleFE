@@ -39,6 +39,7 @@ export const deleteRequest = async (userID: string, friendID: string) => {
 export const viewRequest = async (userID: string) => {
     try {
         return await axios.get(`${url}/${userID}/view-request`,).then((res: any) => {
+            
             return res.data.data
         })
 

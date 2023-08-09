@@ -10,7 +10,7 @@ interface iProps {
 
 const ViewMyFriends: React.FC<iProps> = ({ props }) => {
     const { author } = useTanAuthorOne(props)
-    console.log(author)
+
 
     return <CardHolder>
         <Avatar src={author?.avatar} />
